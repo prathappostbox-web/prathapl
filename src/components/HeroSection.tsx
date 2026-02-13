@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Download, ArrowDown, User } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const roles = ["BCA Student", "Aspiring Software Developer", "Quick Learner"];
@@ -65,12 +65,6 @@ const HeroSection = () => {
       />
 
       <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
-        {/* Profile placeholder */}
-        <div className="mx-auto mb-8 w-32 h-32 rounded-full gradient-bg p-[3px]">
-          <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-            <User size={48} className="text-muted-foreground" />
-          </div>
-        </div>
 
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           Hi, I'm <span className="gradient-text">Prathap L</span>
@@ -90,11 +84,7 @@ const HeroSection = () => {
           A passionate 2nd-year BCA student from Bangalore, eager to build impactful software and grow as a developer.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button className="gradient-bg hover:opacity-90 transition-opacity text-primary-foreground glow-primary" size="lg">
-            <Download size={18} />
-            Download Resume
-          </Button>
+        <div className="flex justify-center">
           <Button
             variant="outline"
             size="lg"
