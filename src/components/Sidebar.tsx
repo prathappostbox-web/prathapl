@@ -1,15 +1,19 @@
-import { MapPin, Phone, Mail, Github, Linkedin, GraduationCap, User } from "lucide-react";
+import { MapPin, Phone, Mail, Github, Linkedin, GraduationCap } from "lucide-react";
+import prathapPhoto from "@/assets/prathap-profile.jpg";
 
 const Sidebar = () => {
   return (
     <div className="space-y-5">
       {/* Profile Card */}
       <div className="rounded-2xl border border-border bg-card p-6 flex flex-col items-center text-center space-y-3">
-        {/* Profile Photo Placeholder */}
+        {/* Profile Photo */}
         <div className="relative">
-          <div className="w-28 h-28 rounded-full gradient-bg flex items-center justify-center ring-4 ring-primary/20 overflow-hidden">
-            {/* Photo will be placed here — use id="profile-photo" */}
-            <User size={52} className="text-primary-foreground/80" />
+          <div className="w-28 h-28 rounded-full ring-4 ring-primary/30 overflow-hidden">
+            <img
+              src={prathapPhoto}
+              alt="Prathap L"
+              className="w-full h-full object-cover object-center scale-110"
+            />
           </div>
           <span className="absolute bottom-1 right-1 w-5 h-5 rounded-full bg-emerald-500 border-2 border-card" />
         </div>
