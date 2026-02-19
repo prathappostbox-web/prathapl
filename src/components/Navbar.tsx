@@ -1,13 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
-];
-
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -24,23 +17,13 @@ const Navbar = () => {
         scrolled ? "bg-background/80 backdrop-blur-lg shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         <a href="#" className="text-xl font-bold gradient-text">
           Prathap L
         </a>
-
-        {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
+        <span className="hidden md:block text-sm text-muted-foreground">
+          BCA Student · Charan's Degree College · Bangalore
+        </span>
 
         {/* Mobile toggle */}
         <button
@@ -52,19 +35,10 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile info */}
       {mobileOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-lg border-t border-border px-6 py-4 space-y-3">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileOpen(false)}
-              className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
+        <div className="md:hidden bg-background/95 backdrop-blur-lg border-t border-border px-4 py-3">
+          <p className="text-sm text-muted-foreground">BCA Student · Charan's Degree College · Bangalore</p>
         </div>
       )}
     </nav>
